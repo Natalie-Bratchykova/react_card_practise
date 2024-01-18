@@ -1,0 +1,15 @@
+.emoji-card{
+    margin-top: 3%;
+    background-color: #ccc;
+    color: black;
+    font-size: 1.2em;
+    width: 20vw;
+}
+
+.emoji-card__emoji, .emoji-card__title{
+    text-align: center;
+    font-size: 3em;
+}
+.emoji-card__title{
+    font-size: 2.5em;
+}
