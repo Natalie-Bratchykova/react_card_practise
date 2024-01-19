@@ -1,0 +1,14 @@
+input{
+    padding: 1% 2%;
+    font-size: 1.3em;
+    background: #DCF2F1;
+    border: none;
+    margin-top: 1%;
+    outline: none;
+    transition: all .3s linear;
+}
+
+input:focus{
+    background: #AAD9BB;
+    border-radius: .6em;
+}
