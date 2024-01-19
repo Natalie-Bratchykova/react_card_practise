@@ -6,6 +6,7 @@ import { ChangeState, ChangeTime } from "./increase";
 
 
 import "../styles/main.css"
+import { Form } from "./form";
 export const Main = (props) => {
   return (
     <main>
@@ -35,6 +36,8 @@ export const Main = (props) => {
         <ChangeState/>
         <hr/>
         <ChangeTime/>
+        <hr/>
+        <Form/>
       </div>
     </main>
   );
