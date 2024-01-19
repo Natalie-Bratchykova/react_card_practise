@@ -1,0 +1,43 @@
+.state__container{
+    /* width: 100%; */
+    padding: 1% 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.state__value{
+    font-size: 1.4em;
+    margin-left: 2%;
+    margin-right: 2%;
+    color: #EEF296;
+}
+.state__container button{
+    font-size: 1.3em;
+    outline: none;
+    border: none;
+    padding: 2%;
+    border-radius: .4em;
+
+}
+.state__container button:nth-child(1){
+    background: #FF8F8F;
+}
+.state__container button:nth-child(3){
+    background: #9ADE7B;
+}
+
+.state__container button:hover{
+    cursor: pointer;
+}
+
+.state__title{
+    font-size: 2.5em;
+}
+.state__time{
+    font-size: 3em;
+}
+.column{
+    flex-direction: column;
+    
+    
+}

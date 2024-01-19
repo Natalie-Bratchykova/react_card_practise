@@ -1,15 +1,16 @@
 // import styles
-import "./App.css";
+
 import { Main } from "./components/main";
 import { Login } from "./components/Login";
+import "./App.css";
 
-
-const isLogged = false;
+const isLogged = !false;
 
 function App() {
   return (
     <div>
       {isLogged ? <Main/>: <Login/>}
+  
     </div>
   );
 }
