@@ -1,28 +1,53 @@
 import React from "react";
-import "../styles/login.css"
+import "../styles/login.css";
 
 export const Form = () => {
-  const grates = "Hello";
-  let [currentValue, setValue] = React.useState(grates);
+  let [currentValue, setValue] = React.useState({
+    firstName: "",
+    LastName: "",
+  });
 
-  // for changing on writing 
-  function changeTitle(e) {
-     currentValue = grates + " " + e.target.value;
-   // setValue(currentValue);
+  function handleChanges(e) {
+    const {name, value} = e.target;
+
+    setValue((prev) => {
+      if (name === "firstName") {
+        return {
+          firstName: value,
+          LastName: prev.LastName,
+        };
+      } else if(name === "lastName") {
+        return {
+          firstName: prev.firstName,
+          LastName: value,
+        };
+      }
+    });
   }
 
-  // function for update on submitting 
-  function updateOnSubmit(ev){
-    ev.preventDefault();
-    setValue(currentValue)
-  }
-
+  // we write value ={updatedStateValue} for control that updated value and current value
+  // in input are the same
 
   return (
     <form className="login__form">
-      <h3 className="login__title">{currentValue}</h3>
-      <input type="text" onChange={changeTitle}  placeholder="input your name" />
-      <button className="login__submit" onClick={updateOnSubmit}>Submit</button>
+      <h3 className="login__title">
+        Hi, {currentValue.firstName} {currentValue.LastName}
+      </h3>
+      <input
+        type="text"
+        onChange={handleChanges}
+        name="firstName"
+        placeholder="input your first name"
+        value={currentValue.firstName}
+      />
+      <input
+        type="text"
+        onChange={handleChanges}
+        name="lastName"
+        placeholder="input your last name"
+        value={currentValue.LastName}
+      />
+      <button className="login__submit">Submit</button>
     </form>
   );
 };
